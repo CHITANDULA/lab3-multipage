@@ -1,0 +1,131 @@
+/* Shared Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 1rem;
+    background: darkturquoise;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 0;
+    background: whitesmoke;
+    animation: fadeIn 1s;
+}
+
+/* Flexbox Layout (Home Page) */
+.flex-container {
+    display: flex;
+    gap: 7rem;
+    padding: 7rem;
+}
+
+.intro, .sidebar {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+/* Grid Layout (Services Page) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 6rem;
+}
+
+.card {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: darkturquoise;
+}
+
+button {
+    padding: 0.8rem;
+    background: darkturquoise;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: turquoise;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .grid-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    nav ul { flex-direction: column; }
+    .flex-container { flex-direction: column; }
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .grid-container { grid-template-columns: 1fr; }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background:lightblue;
+}
